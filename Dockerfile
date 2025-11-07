@@ -7,7 +7,7 @@
 FROM python:3.10-slim
 
 # ---- Metadata (optional) ----
-LABEL maintainer="Anurag Jambhulkar <your.email@example.com>"
+LABEL maintainer="Anurag Jambhulkar <jambhulkaranurag12@gmail.com>"
 LABEL description="Facial Paralysis Simulator built with Gradio, MediaPipe, and OpenCV."
 
 # ---- Set working directory ----
