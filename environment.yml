@@ -1,0 +1,15 @@
+name: facial-paralysis-sim
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - gradio>=3.0
+      - opencv-python>=4.5
+      - mediapipe>=0.10
+      - numpy>=1.22
+      - scipy>=1.9
+      - setuptools
+      - wheel

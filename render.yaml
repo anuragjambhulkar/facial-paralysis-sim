@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: facial-paralysis-simulator
+    env: python
+    plan: free
+    region: singapore
+    buildCommand: |
+      pip install --upgrade pip wheel setuptools
+      pip install -r requirements.txt
+    startCommand: |
+      python app.py
+    envVars:
+      - key: OMP_NUM_THREADS
+        value: "1"
+    healthCheckPath: /
+    autoDeploy: true
