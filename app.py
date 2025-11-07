@@ -403,5 +403,7 @@ def build_interface():
 
 if __name__ == "__main__":
     app = build_interface()
+    # Read the PORT environment variable (Render sets this)
     port = int(os.environ.get("PORT", 7860))
-    app.launch(server_name="0.0.0.0", server_port=port)
+    # Ensure Gradio listens on all interfaces so Render's proxy can reach it
+    app.launch(server_name="0.0.0.0", server_port=port, share=False)
